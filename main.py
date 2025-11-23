@@ -2,10 +2,7 @@ import telebot
 from telebot import types
 import os
 
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
-if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN environment variable is required")
-
+BOT_TOKEN = "7501309140:AAHKx7Pa5Oz52I6Fo_2YP3Moe9hfq6ukfO4"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 def main_menu():
@@ -81,7 +78,7 @@ def back_to_menu(call):
     welcome_text = """Что умеет бот?
 
 Бренд Pushka Tuki-tuki приветствует Вас!
-Здесь вы можете задать свой вопрос, получить кешбек за покупку, а так же ознакомиться с инструкциями и видео-курсами с использованием нашей продукции"""
+Здесь вы можете задать свой вопрос, получить кешбек за покупку, а так же ознакомиться с инструкций и видео-курсами с использованием нашей продукции"""
     
     bot.send_message(
         call.message.chat.id,
@@ -94,7 +91,7 @@ def handle_other_messages(message):
     welcome_text = """Что умеет бот?
 
 Бренд Pushka Tuki-tuki приветствует Вас!
-Здесь вы можете задать свой вопрос, получить кешбек за покупку, а так же ознакомиться с инструкциями и видео-курсами с использованием нашей продукции"""
+Здесь вы можете задать свой вопрос, получить кешбек за покупку, а так же ознакомиться с инструкций и видео-курсами с использованием нашей продукции"""
     
     bot.send_message(
         message.chat.id,
